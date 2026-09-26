@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crop_photo_title"
+        android:textColor="?attr/appPrimaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/crop_photo_msg"
+        android:textColor="?attr/appTextMutedColor"
+        android:textSize="13sp" />
+
+    <!-- Crop Frame Preview with Touch Pan, Zoom and Rotate -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCropFrame"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="?attr/appCardBgColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:strokeColor="?attr/appPrimaryColor"
+        app:strokeWidth="2.5dp">
+
+        <com.example.coupledaysinlove.dialogs.TouchCropImageView
+            android:id="@+id/ivCropPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/crop_photo_title" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Perfectly Centered Circular Rotate Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnRotateCrop"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/appPrimaryColor"
+            app:strokeWidth="1.2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/rotate_photo"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_rotate"
+                app:tint="?attr/appPrimaryColor" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelCrop"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="?attr/appTextMutedColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/save_cropped_photo"
+            app:backgroundTint="?attr/appPrimaryColor"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

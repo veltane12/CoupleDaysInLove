@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/appCardBgColor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/security_lock_title"
+        android:src="@drawable/ic_lock"
+        app:tint="?attr/appPrimaryColor" />
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/set_pin_title"
+        android:textColor="?attr/appTextDarkColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDialogInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/set_pin_instruction"
+        android:textColor="?attr/appTextMutedColor"
+        android:textSize="13sp" />
+
+    <!-- 4 PIN Dot Indicators -->
+    <LinearLayout
+        android:id="@+id/layoutDialogDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/dialogDot1"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_margin="6dp"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_pin_dot_off" />
+
+        <ImageView
+            android:id="@+id/dialogDot2"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_margin="6dp"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_pin_dot_off" />
+
+        <ImageView
+            android:id="@+id/dialogDot3"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_margin="6dp"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_pin_dot_off" />
+
+        <ImageView
+            android:id="@+id/dialogDot4"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_margin="6dp"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_pin_dot_off" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDialogErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <!-- Keypad Section -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <!-- Row 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey1"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="1"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey2"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="2"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey3"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="3"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <!-- Row 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey4"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="4"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey5"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="5"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey6"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="6"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <!-- Row 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey7"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="7"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey8"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="8"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey9"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="9"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <!-- Row 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgCancel"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:text="@string/cancel"
+            android:textColor="?attr/appTextMutedColor"
+            android:textSize="11sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKey0"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            android:text="0"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDlgKeyDelete"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_keypad_button"
+            app:icon="@drawable/ic_backspace"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="22dp"
+            app:iconTint="?attr/appTextDarkColor"
+            app:strokeColor="?attr/appCardStrokeColor" />
+
+    </GridLayout>
+
+</LinearLayout>

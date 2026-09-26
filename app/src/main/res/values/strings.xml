@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">Pareja (Días en Amor)</string>
+    <string name="nav_counter">Contador</string>
+    <string name="nav_events">Eventos</string>
+    <string name="nav_profile">Perfiles</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Counter Screen -->
+    <string name="default_partner_1">Persona 1</string>
+    <string name="default_partner_2">Persona 2</string>
+    <string name="days_together_title">Días Juntos</string>
+    <string name="days_suffix">Días</string>
+    <string name="since_date_prefix">Desde el</string>
+    <string name="no_start_date_msg">Aún no han seleccionado su fecha de inicio</string>
+    <string name="select_start_date">Seleccionar fecha de inicio</string>
+    <string name="select_date_subtitle">Ingresa la fecha de aniversario o inicio de su relación</string>
+    <string name="select_date_hint">Fecha (DD/MM/AA)</string>
+    <string name="invalid_date_msg">Fecha inválida (DD/MM/AA)</string>
+    <string name="enter_date_msg">Ingresa la fecha (DD/MM/AA)</string>
+    <string name="next_anniversary">Próximo Aniversario</string>
+    <string name="romantic_quote">\"El amor no se mide en minutos, sino en cada día compartido juntos.\"</string>
+    <string name="share_achievement">Compartir Logro</string>
+    <string name="share_card_chooser_title">Compartir Tarjeta de Aniversario</string>
+    <string name="share_card_headline">¡Hoy cumplimos %d días juntos! ❤️</string>
+    <string name="share_card_sub_brand">PAREJA • DÍAS EN AMOR</string>
+    <string name="share_card_footer_watermark">💕 Creado con Pareja (Días en Amor) 💕</string>
+    <string name="share_card_no_date_error">Selecciona la fecha de inicio antes de compartir tu logro.</string>
+
+    <!-- Event Reminders & Timeline Journal -->
+    <string name="events_title">Diario de Recuerdos &amp; Eventos</string>
+    <string name="add_event">Añadir Recuerdo / Evento</string>
+    <string name="edit_event">Editar Recuerdo / Evento</string>
+    <string name="event_name_hint">Nombre del evento o momento (ej. Nuestra primera cita)</string>
+    <string name="event_date_hint">Fecha del Evento / Momento</string>
+    <string name="birth_date_hint">Fecha de Nacimiento</string>
+    <string name="date_format_hint">DD/MM/AAAA</string>
+    <string name="event_category_hint">Categoría</string>
+    <string name="event_description_hint">Nota o recuerdo especial (ej. "Foto del día que nos mudamos juntos")</string>
+    <string name="add_memory_photo">Añadir Foto del Recuerdo</string>
+    <string name="change_memory_photo">Cambiar Foto</string>
+    <string name="remove_memory_photo">Quitar Foto</string>
+    <string name="days_left">%d días faltantes</string>
+    <string name="today_event">¡Es Hoy! 🎉</string>
+    <string name="no_events_msg">No hay momentos ni eventos guardados. ¡Agrega su primer recuerdo o fecha especial!</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="event_deleted">Evento eliminado</string>
+    <string name="delete_event_confirm_title">¿Eliminar evento?</string>
+    <string name="delete_event_confirm_msg">¿Estás seguro de que deseas eliminar este evento o recuerdo?</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Perfiles de la Pareja</string>
+    <string name="partner_names">Nombres de la Pareja</string>
+    <string name="hint_partner_1">Nombre Persona 1</string>
+    <string name="hint_partner_2">Nombre Persona 2</string>
+    <string name="couple_photos">Fotos de la Pareja</string>
+    <string name="change_photo">Cambiar Foto</string>
+    <string name="delete_photo">Eliminar Foto</string>
+    <string name="delete_photo_confirm_title">¿Eliminar foto?</string>
+    <string name="delete_photo_confirm_msg">¿Deseas eliminar esta foto de perfil?</string>
+    <string name="photo_deleted">Foto eliminada</string>
+    <string name="crop_photo_title">Ajustar Foto</string>
+    <string name="crop_photo_msg">Pellizca para zoom, arrastra para mover o rota la foto</string>
+    <string name="save_cropped_photo">Aceptar</string>
+    <string name="rotate_photo">Rotar</string>
+    <string name="start_date">Fecha de Aniversario / Inicio</string>
+    <string name="clear_anniversary_date">Borrar Fecha</string>
+    <string name="delete_anniversary_confirm_title">¿Borrar fecha de aniversario?</string>
+    <string name="delete_anniversary_confirm_msg">¿Estás seguro de que deseas borrar la fecha de aniversario? Se reiniciará el contador principal.</string>
+    <string name="anniversary_cleared">Fecha de aniversario eliminada</string>
+    <string name="no_date_selected">Sin fecha seleccionada</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Ajustes de la Aplicación</string>
+    <string name="notifications">Recordatorios e Indicadores</string>
+    <string name="enable_notifications">Activar Notificaciones</string>
+    <string name="all_day_notifications_title">Notificaciones todo el día</string>
+    <string name="personalization_title">Personalización de la App</string>
+    <string name="dark_mode_title">Modo Oscuro de la App</string>
+    <string name="dark_mode_desc">Cambia los colores claros a tonos oscuros para descansar la vista</string>
+
+    <!-- Color Theme Palette Selection -->
+    <string name="theme_selection_title">Paleta de Colores de la App</string>
+    <string name="theme_selection_desc">Elige el tono de color principal para personalizar la aplicación</string>
+    <string name="theme_pink">Rosa Romántico</string>
+    <string name="theme_red">Rojo Pasión</string>
+    <string name="theme_purple">Lavanda Suave</string>
+    <string name="theme_blue">Azul Cielo</string>
+    <string name="theme_mint">Menta Pastel</string>
+    <string name="theme_changed_toast">Tema cambiado a %s</string>
+
+    <!-- Widget Customization -->
+    <string name="widget_customization_title">Personalización del Widget</string>
+    <string name="widget_dark_mode_title">Modo Oscuro del Widget</string>
+    <string name="widget_dark_mode_desc">Aplica tonos oscuros al widget de la pantalla de inicio</string>
+    <string name="widget_photo_size_title">Tamaño de Fotos del Widget</string>
+    <string name="widget_text_size_title">Tamaño de Texto del Widget</string>
+    <string name="size_small">Pequeño</string>
+    <string name="size_medium">Mediano</string>
+    <string name="size_large">Grande</string>
+
+    <string name="notification_permission_msg">Por favor permite notificaciones para no olvidar fechas especiales.</string>
+    <string name="photo_updated">Foto actualizada correctamente</string>
+
+    <!-- Bucket List / Lista de Deseos -->
+    <string name="bucket_list_title">Lista de Deseos</string>
+    <string name="bucket_list_subtitle">Cosas por hacer juntos 💕</string>
+    <string name="bucket_list_progress">%1$d de %2$d completados (%3$d%%)</string>
+    <string name="add_bucket_item">Añadir Meta</string>
+    <string name="edit_bucket_item">Editar Meta</string>
+    <string name="bucket_item_title_hint">Meta, cita o viaje (ej. Ir a un concierto juntos)</string>
+    <string name="bucket_category_hint">Categoría</string>
+    <string name="filter_all">Todas</string>
+    <string name="filter_pending">Pendientes</string>
+    <string name="filter_completed">Completadas</string>
+    <string name="no_bucket_items_msg">¡Agreguen su primera meta, cita o viaje juntos!</string>
+    <string name="delete_bucket_confirm_title">¿Eliminar meta?</string>
+    <string name="delete_bucket_confirm_msg">¿Estás seguro de que deseas eliminar esta meta de la lista?</string>
+    <string name="bucket_item_deleted">Meta eliminada</string>
+    <string name="completed_on">Realizado el %s</string>
+    <string name="pending_status">Pendiente</string>
+    <string name="goal_completed_toast">¡Felicidades! Meta realizada 🎉❤️</string>
+
+    <!-- Security Lock / Candado de Seguridad -->
+    <string name="security_section_title">Candado de Seguridad &amp; Privacidad</string>
+    <string name="security_lock_title">Bloqueo de la Aplicación</string>
+    <string name="security_lock_desc">Protege fotos, nombres y recuerdos de la pareja con PIN o huella dactilar</string>
+    <string name="biometric_unlock_title">Desbloqueo con Biometría / Huella</string>
+    <string name="biometric_unlock_desc">Permite usar la huella dactilar o rostro al abrir la app</string>
+    <string name="change_pin_title">Cambiar PIN de 4 dígitos</string>
+    <string name="change_pin_desc">Actualiza tu código PIN de acceso</string>
+    <string name="set_pin_title">Crear PIN de Seguridad</string>
+    <string name="set_pin_instruction">Ingresa un PIN de 4 dígitos para proteger tu app</string>
+    <string name="confirm_pin_instruction">Ingresa de nuevo el PIN para confirmarlo</string>
+    <string name="enter_current_pin_title">Verifica tu Identidad</string>
+    <string name="enter_current_pin_instruction">Ingresa tu PIN actual para continuar</string>
+    <string name="enter_pin_unlock_title">App Protegida</string>
+    <string name="enter_pin_unlock_subtitle">Ingresa tu PIN de 4 dígitos para ingresar</string>
+    <string name="pin_dont_match">Los PINs no coinciden. Inténtalo de nuevo.</string>
+    <string name="wrong_pin">PIN incorrecto. Inténtalo de nuevo.</string>
+    <string name="pin_set_success">PIN de seguridad configurado</string>
+    <string name="pin_changed_success">PIN actualizado correctamente</string>
+    <string name="security_enabled_toast">Candado de seguridad activado 🔒</string>
+    <string name="security_disabled_toast">Candado de seguridad desactivado 🔓</string>
+    <string name="biometric_prompt_title">Desbloquear Pareja</string>
+    <string name="biometric_prompt_subtitle">Confirma tu huella dactilar para acceder</string>
+    <string name="biometric_prompt_negative">Usar PIN</string>
+    <string name="use_pin">Usar PIN</string>
+    <string name="use_biometrics">Usar Biometría</string>
+    <string name="lock_frequency_title">Frecuencia de Solicitud</string>
+    <string name="lock_frequency_desc">Elige cuándo solicitar el PIN o la biometría</string>
+    <string name="lock_freq_always">Siempre</string>
+    <string name="lock_freq_app_close">Al cerrar app</string>
+    <string name="lock_freq_once_a_day">1 vez al día</string>
+</resources>

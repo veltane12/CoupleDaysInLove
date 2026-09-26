@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Romantic Material3 Theme -->
+    <style name="Base.Theme.CoupleDaysInLove" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">?attr/appPrimaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">?attr/appCardBgColor</item>
+        <item name="colorOnPrimaryContainer">?attr/appTextDarkColor</item>
+        <item name="colorSecondary">?attr/appAccentColor</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="android:statusBarColor">?attr/appSoftBgColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">?attr/appSoftBgColor</item>
+    </style>
+
+    <!-- Theme Option 1: Rosa Romántico (Default) -->
+    <style name="Theme.CoupleDaysInLove.Pink" parent="Base.Theme.CoupleDaysInLove">
+        <item name="appPrimaryColor">#D81B60</item>
+        <item name="appPrimaryLightColor">#FF6090</item>
+        <item name="appPrimaryDarkColor">#A00037</item>
+        <item name="appAccentColor">#EC407A</item>
+        <item name="appSoftBgColor">#FFF5F8</item>
+        <item name="appCardBgColor">#FFF0F5</item>
+        <item name="appCardStrokeColor">#F8BBD0</item>
+        <item name="appTextDarkColor">#2C0E18</item>
+        <item name="appTextMutedColor">#884A5E</item>
+    </style>
+
+    <!-- Theme Option 2: Rojo Pasión -->
+    <style name="Theme.CoupleDaysInLove.Red" parent="Base.Theme.CoupleDaysInLove">
+        <item name="appPrimaryColor">#E53935</item>
+        <item name="appPrimaryLightColor">#FF6E40</item>
+        <item name="appPrimaryDarkColor">#B71C1C</item>
+        <item name="appAccentColor">#FF5252</item>
+        <item name="appSoftBgColor">#FFF5F5</item>
+        <item name="appCardBgColor">#FFEBEE</item>
+        <item name="appCardStrokeColor">#FFCDD2</item>
+        <item name="appTextDarkColor">#2C0E0E</item>
+        <item name="appTextMutedColor">#884A4A</item>
+    </style>
+
+    <!-- Theme Option 3: Lavanda Suave -->
+    <style name="Theme.CoupleDaysInLove.Purple" parent="Base.Theme.CoupleDaysInLove">
+        <item name="appPrimaryColor">#8E24AA</item>
+        <item name="appPrimaryLightColor">#BA68C8</item>
+        <item name="appPrimaryDarkColor">#4A148C</item>
+        <item name="appAccentColor">#AB47BC</item>
+        <item name="appSoftBgColor">#FBF5FF</item>
+        <item name="appCardBgColor">#F3E5F5</item>
+        <item name="appCardStrokeColor">#E1BEE7</item>
+        <item name="appTextDarkColor">#230E2C</item>
+        <item name="appTextMutedColor">#754A88</item>
+    </style>
+
+    <!-- Theme Option 4: Azul Cielo -->
+    <style name="Theme.CoupleDaysInLove.Blue" parent="Base.Theme.CoupleDaysInLove">
+        <item name="appPrimaryColor">#0288D1</item>
+        <item name="appPrimaryLightColor">#4FC3F7</item>
+        <item name="appPrimaryDarkColor">#01579B</item>
+        <item name="appAccentColor">#03A9F4</item>
+        <item name="appSoftBgColor">#F0F9FF</item>
+        <item name="appCardBgColor">#E1F5FE</item>
+        <item name="appCardStrokeColor">#B3E5FC</item>
+        <item name="appTextDarkColor">#0E222C</item>
+        <item name="appTextMutedColor">#4A7288</item>
+    </style>
+
+    <!-- Theme Option 5: Menta Pastel -->
+    <style name="Theme.CoupleDaysInLove.Mint" parent="Base.Theme.CoupleDaysInLove">
+        <item name="appPrimaryColor">#00897B</item>
+        <item name="appPrimaryLightColor">#4DB6AC</item>
+        <item name="appPrimaryDarkColor">#004D40</item>
+        <item name="appAccentColor">#26A69A</item>
+        <item name="appSoftBgColor">#F0FDF4</item>
+        <item name="appCardBgColor">#E0F2F1</item>
+        <item name="appCardStrokeColor">#B2DFDB</item>
+        <item name="appTextDarkColor">#0E2C28</item>
+        <item name="appTextMutedColor">#4A8880</item>
+    </style>
+
+    <!-- Default Theme Alias for AndroidManifest -->
+    <style name="Theme.CoupleDaysInLove" parent="Theme.CoupleDaysInLove.Pink" />
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/Widget.App.BottomNavigationView.ActiveIndicator</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/appCardBgColor</item>
+    </style>
+
+    <style name="CircularImageView">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

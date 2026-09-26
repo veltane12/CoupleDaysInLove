@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appSoftBgColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Couple Photos Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Partner 1 Photo & Name Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:cardBackgroundColor="?attr/appCardBgColor"
+                    app:cardCornerRadius="65dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="?attr/appPrimaryColor"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:id="@+id/ivPartner1Photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/couple_photos"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_avatar"
+                        app:tint="?attr/appPrimaryColor" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvPartner1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/default_partner_1"
+                    android:textColor="?attr/appTextDarkColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Union Symbol Center Badge -->
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_home_union_hearts" />
+
+            <!-- Partner 2 Photo & Name Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:cardBackgroundColor="?attr/appCardBgColor"
+                    app:cardCornerRadius="65dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="?attr/appPrimaryColor"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:id="@+id/ivPartner2Photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/couple_photos"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_avatar"
+                        app:tint="?attr/appPrimaryColor" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvPartner2Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/default_partner_2"
+                    android:textColor="?attr/appTextDarkColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/no_start_date_msg"
+            android:textColor="?attr/appTextMutedColor"
+            android:textSize="14sp" />
+
+        <!-- Select Start Date Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectDate"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_start_date"
+            android:textColor="@color/white"
+            app:backgroundTint="?attr/appPrimaryColor"
+            app:icon="@drawable/ic_nav_counter"
+            app:iconTint="@color/white" />
+
+        <!-- Main Hero Counter Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:strokeColor="?attr/appCardStrokeColor"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/days_together_title"
+                    android:textColor="?attr/appTextMutedColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDaysCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="?attr/appPrimaryColor"
+                    android:textSize="54sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/days_suffix"
+                    android:textColor="?attr/appPrimaryDarkColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="14dp"
+                    android:background="?attr/appCardStrokeColor" />
+
+                <TextView
+                    android:id="@+id/tvDetailedDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="¡Comiencen su historia juntos!"
+                    android:textColor="?attr/appTextDarkColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShareAchievement"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/share_achievement"
+                    android:textColor="?attr/appPrimaryDarkColor"
+                    app:backgroundTint="?attr/appCardBgColor"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="?attr/appPrimaryColor"
+                    app:strokeColor="?attr/appCardStrokeColor"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Next Anniversary Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardNextAnniversary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="?attr/appCardBgColor"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:strokeColor="?attr/appCardStrokeColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="@string/next_anniversary"
+                    android:src="@drawable/ic_nav_counter"
+                    app:tint="?attr/appPrimaryColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/next_anniversary"
+                        android:textColor="?attr/appTextMutedColor"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvNextAnniversaryCountdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Selecciona fecha de inicio"
+                        android:textColor="?attr/appTextDarkColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Couple Bucket List Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBucketList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:strokeColor="?attr/appCardStrokeColor"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:contentDescription="@string/bucket_list_title"
+                        android:src="@drawable/ic_bucket_list"
+                        app:tint="?attr/appPrimaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bucket_list_title"
+                            android:textColor="?attr/appTextDarkColor"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bucket_list_subtitle"
+                            android:textColor="?attr/appTextMutedColor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddBucketItem"
+                        style="@style/Widget.Material3.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_bucket_item"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:backgroundTint="?attr/appPrimaryColor"
+                        app:icon="@drawable/ic_add"
+                        app:iconTint="@color/white" />
+                </LinearLayout>
+
+                <!-- Progress Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBucketProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 de 0 completados (0%)"
+                        android:textColor="?attr/appPrimaryDarkColor"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressBucket"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="6dp"
+                        android:progress="0"
+                        app:indicatorColor="?attr/appPrimaryColor"
+                        app:trackColor="?attr/appCardBgColor"
+                        app:trackCornerRadius="4dp" />
+                </LinearLayout>
+
+                <!-- Filter Chips -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cgBucketFilters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipFilterAll"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/filter_all"
+                        app:chipMinHeight="36dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipFilterPending"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_pending"
+                        app:chipMinHeight="36dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipFilterCompleted"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_completed"
+                        app:chipMinHeight="36dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- RecyclerView for Bucket Items -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBucketList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Empty State -->
+                <LinearLayout
+                    android:id="@+id/layoutEmptyBucket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="@string/bucket_list_title"
+                        android:src="@drawable/ic_bucket_list"
+                        app:tint="?attr/appTextMutedColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/no_bucket_items_msg"
+                        android:textColor="?attr/appTextMutedColor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Romantic Quote -->
+        <TextView
+            android:id="@+id/tvRomanticQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="@string/romantic_quote"
+            android:textColor="?attr/appTextMutedColor"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="appPrimaryColor" format="color" />
+    <attr name="appPrimaryLightColor" format="color" />
+    <attr name="appPrimaryDarkColor" format="color" />
+    <attr name="appAccentColor" format="color" />
+    <attr name="appSoftBgColor" format="color" />
+    <attr name="appCardBgColor" format="color" />
+    <attr name="appCardStrokeColor" format="color" />
+    <attr name="appTextDarkColor" format="color" />
+    <attr name="appTextMutedColor" format="color" />
+</resources>

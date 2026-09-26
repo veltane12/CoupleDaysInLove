@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_pink">#D81B60</color>
+    <color name="primary_pink_light">#FF6090</color>
+    <color name="primary_pink_dark">#A00037</color>
+    <color name="accent_rose">#EC407A</color>
+    <color name="bg_soft_pink">#FFF5F8</color>
+    <color name="card_bg_pink">#FFF0F5</color>
+    <color name="card_stroke_pink">#F8BBD0</color>
+    <color name="text_dark_rose">#2C0E18</color>
+    <color name="text_muted_rose">#884A5E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

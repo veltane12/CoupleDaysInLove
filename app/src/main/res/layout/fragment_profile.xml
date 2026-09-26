@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appSoftBgColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/profile_title"
+            android:textColor="?attr/appTextDarkColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Card Couple Profile & Photos -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:strokeColor="?attr/appCardStrokeColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/couple_photos"
+                    android:textColor="?attr/appPrimaryColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Photos Selection Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Person 1 Photo Selector -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Photo Frame with Floating Camera Badge -->
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardPhotoContainer1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardBackgroundColor="?attr/appCardBgColor"
+                                app:cardCornerRadius="50dp"
+                                app:cardElevation="4dp"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="2.5dp">
+
+                                <ImageView
+                                    android:id="@+id/ivSettingsPhoto1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/couple_photos"
+                                    android:padding="12dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_default_avatar"
+                                    app:tint="?attr/appPrimaryColor" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Floating Camera Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="bottom|end"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="6dp"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="1.5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/change_photo"
+                                    android:padding="6dp"
+                                    android:src="@drawable/ic_camera"
+                                    app:tint="?attr/appPrimaryColor" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </FrameLayout>
+
+                        <!-- Action Buttons Container for Person 1 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChangePhoto1"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="115dp"
+                                android:layout_height="36dp"
+                                android:padding="0dp"
+                                android:text="@string/change_photo"
+                                android:textColor="?attr/appPrimaryColor"
+                                android:textSize="11sp"
+                                app:cornerRadius="18dp"
+                                app:icon="@drawable/ic_camera"
+                                app:iconGravity="textStart"
+                                app:iconPadding="4dp"
+                                app:iconSize="14dp"
+                                app:iconTint="?attr/appPrimaryColor"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="1.2dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDeletePhoto1"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="115dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="2dp"
+                                android:padding="0dp"
+                                android:text="@string/delete"
+                                android:textColor="?attr/appPrimaryDarkColor"
+                                android:textSize="11sp"
+                                app:icon="@drawable/ic_trash"
+                                app:iconGravity="textStart"
+                                app:iconPadding="4dp"
+                                app:iconSize="14dp"
+                                app:iconTint="?attr/appPrimaryDarkColor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Person 2 Photo Selector -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Photo Frame with Floating Camera Badge -->
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardPhotoContainer2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardBackgroundColor="?attr/appCardBgColor"
+                                app:cardCornerRadius="50dp"
+                                app:cardElevation="4dp"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="2.5dp">
+
+                                <ImageView
+                                    android:id="@+id/ivSettingsPhoto2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/couple_photos"
+                                    android:padding="12dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_default_avatar"
+                                    app:tint="?attr/appPrimaryColor" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Floating Camera Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="bottom|end"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="6dp"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="1.5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/change_photo"
+                                    android:padding="6dp"
+                                    android:src="@drawable/ic_camera"
+                                    app:tint="?attr/appPrimaryColor" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </FrameLayout>
+
+                        <!-- Action Buttons Container for Person 2 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChangePhoto2"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="115dp"
+                                android:layout_height="36dp"
+                                android:padding="0dp"
+                                android:text="@string/change_photo"
+                                android:textColor="?attr/appPrimaryColor"
+                                android:textSize="11sp"
+                                app:cornerRadius="18dp"
+                                app:icon="@drawable/ic_camera"
+                                app:iconGravity="textStart"
+                                app:iconPadding="4dp"
+                                app:iconSize="14dp"
+                                app:iconTint="?attr/appPrimaryColor"
+                                app:strokeColor="?attr/appPrimaryColor"
+                                app:strokeWidth="1.2dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDeletePhoto2"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="115dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="2dp"
+                                android:padding="0dp"
+                                android:text="@string/delete"
+                                android:textColor="?attr/appPrimaryDarkColor"
+                                android:textSize="11sp"
+                                app:icon="@drawable/ic_trash"
+                                app:iconGravity="textStart"
+                                app:iconPadding="4dp"
+                                app:iconSize="14dp"
+                                app:iconTint="?attr/appPrimaryDarkColor" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="?attr/appCardStrokeColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/partner_names"
+                    android:textColor="?attr/appPrimaryColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_partner_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPartner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textColor="?attr/appTextDarkColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_partner_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPartner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textColor="?attr/appTextDarkColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveNames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/save"
+                    app:backgroundTint="?attr/appPrimaryColor" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Start Date Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="?attr/appCardStrokeColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_date"
+                    android:textColor="?attr/appPrimaryColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSettingsStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/no_date_selected"
+                    android:textColor="?attr/appTextDarkColor"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDeleteStartDate"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clear_anniversary_date"
+                        android:textColor="?attr/appPrimaryDarkColor" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnChangeStartDate"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/select_start_date"
+                        android:textColor="?attr/appPrimaryColor"
+                        app:strokeColor="?attr/appPrimaryColor" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

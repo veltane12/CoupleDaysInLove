@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="6dp"
+    android:paddingVertical="4dp">
+
+    <!-- Partner 1 Photo Left (Wrap content so ImageView resizes dynamically based on generated Bitmap) -->
+    <ImageView
+        android:id="@+id/ivWidgetPartner1Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_icon_circle_pink"
+        android:contentDescription="@string/couple_photos"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_avatar" />
+
+    <!-- Center Counter Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWidgetCoupleNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Persona 1 &amp; Persona 2"
+            android:textColor="#2C0E18"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWidgetDaysCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="365 Días"
+            android:textColor="#D81B60"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWidgetDetailedDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="1 año, 0 meses"
+            android:textColor="#884A5E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Partner 2 Photo Right (Wrap content so ImageView resizes dynamically based on generated Bitmap) -->
+    <ImageView
+        android:id="@+id/ivWidgetPartner2Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_icon_circle_pink"
+        android:contentDescription="@string/couple_photos"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_avatar" />
+
+</LinearLayout>

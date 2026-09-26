@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_counter"
+        android:icon="@drawable/ic_nav_counter"
+        android:title="@string/nav_counter" />
+
+    <item
+        android:id="@+id/nav_events"
+        android:icon="@drawable/ic_nav_events"
+        android:title="@string/nav_events" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_default_avatar"
+        android:title="@string/nav_profile" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_nav_settings"
+        android:title="@string/nav_settings" />
+
+</menu>

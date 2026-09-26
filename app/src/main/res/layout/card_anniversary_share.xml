@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1080px"
+    android:layout_height="1000px"
+    android:background="@drawable/bg_share_card_gradient"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Blobs decorativos translúcidos en el fondo -->
+    <ImageView
+        android:layout_width="360px"
+        android:layout_height="360px"
+        android:layout_marginTop="-100px"
+        android:layout_marginStart="-120px"
+        android:alpha="0.15"
+        android:src="@drawable/ic_decor_blob_soft"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginEnd="-100px"
+        android:layout_marginBottom="-80px"
+        android:alpha="0.15"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_decor_blob_soft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ===================== HEADER: Fotos separadas + Ícono Central ===================== -->
+
+    <LinearLayout
+        android:id="@+id/layoutPhotosContainer"
+        android:layout_width="380dp"
+        android:layout_height="159dp"
+        android:layout_marginHorizontal="50px"
+        android:layout_marginTop="50px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Partner 1 Photo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivSharePartner1Photo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/couple_photos"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_avatar"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:strokeColor="@color/white"
+            app:strokeWidth="6px" />
+
+        <!-- Union Heart Icon: sin círculo de fondo, ubicado entre fotos -->
+        <ImageView
+            android:id="@+id/ivUnionHeart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="1px"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_home_union_hearts" />
+
+        <!-- Partner 2 Photo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivSharePartner2Photo"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:contentDescription="@string/couple_photos"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_avatar"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:strokeColor="@color/white"
+            app:strokeWidth="6px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvShareCoupleNames"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18px"
+        android:layout_marginHorizontal="40px"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:text="Persona 1 &amp; Persona 2"
+        android:textColor="?attr/appTextDarkColor"
+        android:textSize="40px"
+        app:autoSizeMaxTextSize="40px"
+        app:autoSizeMinTextSize="26px"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhotosContainer" />
+
+    <!-- ===================== TARJETA PRINCIPAL DE MILESTONE ===================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMilestone"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_marginHorizontal="50px"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="40px"
+        app:cardElevation="12px"
+        app:strokeColor="?attr/appCardStrokeColor"
+        app:strokeWidth="2px"
+        app:layout_constraintBottom_toTopOf="@id/tvShareFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShareCoupleNames"
+        app:layout_constraintVertical_bias="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="32px"
+            android:paddingTop="36px"
+            android:paddingBottom="36px">
+
+            <TextView
+                android:id="@+id/tvShareDaysCount"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="500"
+                android:textColor="?attr/appPrimaryColor"
+                android:textSize="120px"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="120px"
+                app:autoSizeMinTextSize="70px"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/tvShareHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="¡Hoy cumplimos 500 días juntos! ❤️"
+                android:textColor="?attr/appPrimaryDarkColor"
+                android:textSize="32px"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="80px"
+                android:layout_height="3px"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="16px"
+                android:background="@drawable/bg_divider_rounded_pink" />
+
+            <TextView
+                android:id="@+id/tvShareDetailedDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="1 año, 4 meses y 14 días"
+                android:textColor="?attr/appTextDarkColor"
+                android:textSize="28px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShareStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
+                android:alpha="0.75"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Desde el 15 de Octubre de 2023"
+                android:textColor="?attr/appTextMutedColor"
+                android:textSize="24px" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ===================== FOOTER: Watermark ===================== -->
+
+    <LinearLayout
+        android:id="@+id/tvShareFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:letterSpacing="0.04"
+            android:text="@string/share_card_footer_watermark"
+            android:textColor="?attr/appPrimaryColor"
+            android:textSize="24px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

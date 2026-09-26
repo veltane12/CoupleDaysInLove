@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardBucketItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="?attr/appCardStrokeColor"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Checkbox for marking done/pending -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbBucketCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:buttonTint="?attr/appPrimaryColor" />
+
+        <!-- Category Icon Badge -->
+        <ImageView
+            android:id="@+id/ivBucketCategoryIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_icon_circle_pink"
+            android:padding="7dp"
+            android:src="@drawable/ic_bucket_list"
+            app:tint="?attr/appPrimaryColor" />
+
+        <!-- Title and Category/Date Subtitle -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBucketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Viajar a la playa juntos"
+                android:textColor="?attr/appTextDarkColor"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBucketSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Viajes • Pendiente"
+                android:textColor="?attr/appTextMutedColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/btnEditBucket"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/save"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="?attr/appPrimaryColor" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnDeleteBucket"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="?attr/appTextMutedColor" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
